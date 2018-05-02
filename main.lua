@@ -36,7 +36,7 @@ physics.addBody( theGround1, "static", {
     bounce = 0.3 
     } )
 
-local theGround2 = display.newImage( "./assets/sprites/ground.png" )
+ local theGround2 = display.newImage( "./assets/sprites/ground.png" )
 theGround2.x = 1520
 theGround2.y = display.contentHeight
 theGround2.id = "the ground" -- notice I called this the same thing
@@ -44,7 +44,7 @@ physics.addBody( theGround2, "static", {
     friction = 0.5, 
     bounce = 0.3 
     } )
-
+ 
 local badCharacter = display.newImage( "./assets/sprites/Idle.png" )
 badCharacter.x = 1520
 badCharacter.y = display.contentHeight - 1000
@@ -97,14 +97,6 @@ rightArrow.x = 260
 rightArrow.y = display.contentHeight - 200
 rightArrow.id = "right arrow"
 
- local theGround = display.newImage( "./assets/sprites/land.png" )
-theGround.x = display.contentCenterX -600
-theGround.y = display.contentHeight -500
-theGround.id = "the ground"
-physics.addBody( theGround, "static", { 
-    friction = 0.5, 
-    bounce = 0.3 
-    } )
 
 local theLand = display.newImage( "./assets/sprites/ground.png" )
 theLand.x = display.contentCenterX
@@ -196,7 +188,7 @@ local function onCollision( event )
             print ("you could increase a score here.")
 
             -- make an explosion sound effect
-            local expolsionSound = audio.loadStream( "./assets/sounds/8bit_bomb_explosion.wav" )
+            local expolsionSound = audio.loadStream( "./assets/audio/8bit_bomb_explosion.wav" )
             local explosionChannel = audio.play( expolsionSound )
 
         end
